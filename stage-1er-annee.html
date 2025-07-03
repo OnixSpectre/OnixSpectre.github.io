@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stage 1ère Année</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      color: #1e1e1e;
+    }
+
+    nav.navbar {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 10px 20px;
+      border-radius: 0 0 15px 15px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .navbar .menu-desktop {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      display: block;
+      padding: 8px 12px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #00aaff;
+    }
+
+    .navbar li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      z-index: 999;
+    }
+
+    .navbar li ul li a {
+      color: #000;
+      padding: 10px 15px;
+    }
+
+    .navbar li ul li a:hover {
+      background-color: #f5f7fa;
+    }
+
+    .navbar li:hover > ul {
+      display: block;
+    }
+
+    .spacer {
+      height: 70px;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #F3F4F6, #E5E7EB);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: #1E40AF;
+    }
+
+    .stage-info, .week-selector {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .stage-info h2, .week-selector h2 {
+      color: #1E3A8A;
+      margin-bottom: 15px;
+    }
+
+    .stage-info p, .week-content p {
+      color: #374151;
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .week-content h3 {
+      color: #1E3A8A;
+    }
+
+    .ast-single-post .entry-content a, .ast-comment-content a:not(.ast-comment-edit-reply-wrap a) {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul class="menu-desktop">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/index.php/ap/">AP</a></li>
+      <li><a href="/index.php/activites/">Activités</a></li>
+      <li><a href="/index.php/projets/">Projets</a></li>
+      <li>
+        <a href="/index.php/stages/stages/">Stages ▼</a>
+        <ul>
+          <li><a href="/index.php/stages/1ere-annee/">Stage 1ère année</a></li>
+          <li><a href="/index.php/stages/2eme-annee/">Stage 2ème année</a></li>
+        </ul>
+      </li>
+      <li><a href="/index.php/veille/">Veille</a></li>
+      <li><a href="/index.php/cv/">CV</a></li>
+      <li><a href="/index.php/contact/">Contact</a></li>
+      <li><a href="/index.php/competences/">Compétences</a></li>
+      <li><a href="/index.php/certifications/">Certifications</a></li>
+    </ul>
+  </nav>
+
+  <div class="spacer"></div>
+
+  <header>
+    <h1>Stage 1ère Année - Compte-Rendu</h1>
+  </header>
+
+  <section class="stage-info">
+    <h2>Informations sur le Stage</h2>
+    <p><strong>Lieu :</strong> Agglomération du Pays de Grasse</p>
+    <p><strong>Service :</strong> Direction des Systèmes d’Information</p>
+    <p><strong>Durée :</strong> 5 semaines (du 2 juin au 4 juillet 2025)</p>
+    <p><strong>Mission principale :</strong> Découverte de la gestion réseau, des outils de supervision et de l’assistance aux utilisateurs.</p>
+  </section>
+
+  <section class="week-selector">
+    <h2>Consultez le Compte-Rendu par Semaine</h2>
+    <select id="weekSelect" onchange="showWeekContent()">
+      <option value="1">Semaine 1</option>
+      <option value="2">Semaine 2</option>
+      <option value="3">Semaine 3</option>
+      <option value="4">Semaine 4</option>
+      <option value="5">Semaine 5</option>
+    </select>
+
+    <div class="week-content" id="weekContent">
+      <h3>Semaine 1</h3>
+      <p>Durant ma première semaine de stage à la DSI de l’agglomération de Grasse, j’ai participé à la création de comptes, à l’installation de postes informatiques, au repérage réseau dans des bureaux, ainsi qu’à une intervention à la crèche de Spéracèdes pour configurer un VPN IPsec. J’ai également mis à jour des tableaux techniques sur les routeurs et points d’accès réseau.</p>
+      <p><a href="https://nathanvitter.fr/wp-content/uploads/2025/06/Rendu-de-stage-Grasse-_-02_06_25-_-04_07_25-1.pdf" target="_blank">Voir le compte-rendu (PDF)</a></p>
+    </div>
+  </section>
+
+  <script>
+    const contents = {
+      1: `<h3>Semaine 1</h3><p>Durant ma première semaine de stage à la DSI de l’agglomération de Grasse, j’ai participé à la création de comptes, à l’installation de postes informatiques, au repérage réseau dans des bureaux, ainsi qu’à une intervention à la crèche de Spéracèdes pour configurer un VPN IPsec. J’ai également mis à jour des tableaux techniques sur les routeurs et points d’accès réseau.</p><p><a href="https://nathanvitter.fr/wp-content/uploads/2025/06/Rendu-de-stage-Grasse-_-02_06_25-_-04_07_25-1.pdf" target="_blank">Voir le compte-rendu (PDF)</a></p>`,
+      2: `<h3>Semaine 2</h3><p>Contenu à venir…</p>`,
+      3: `<h3>Semaine 3</h3><p>Contenu à venir…</p>`,
+      4: `<h3>Semaine 4</h3><p>Contenu à venir…</p>`,
+      5: `<h3>Semaine 5</h3><p>Contenu à venir…</p>`
+    };
+
+    function showWeekContent() {
+      const selected = document.getElementById('weekSelect').value;
+      document.getElementById('weekContent').innerHTML = contents[selected];
+    }
+  </script>
+
+</body>
+</html>
