@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atelier de Professionnalisation</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1e1e1e;
+      background-color: #f5f7fa;
+    }
+
+    nav.navbar {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 10px 20px;
+      border-radius: 0 0 15px 15px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .navbar .menu-desktop {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      display: block;
+      padding: 8px 12px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #00aaff;
+    }
+
+    .navbar li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      z-index: 999;
+    }
+
+    .navbar li ul li a {
+      color: #000;
+      padding: 10px 15px;
+    }
+
+    .navbar li ul li a:hover {
+      background-color: #f5f7fa;
+    }
+
+    .navbar li:hover > ul {
+      display: block;
+    }
+
+    .spacer {
+      height: 60px;
+    }
+
+    .hover-btn {
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #1E40AF;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .hover-btn:hover {
+      background: #F1F5F9;
+      color: #1E40AF;
+      transform: scale(1.05);
+    }
+
+    .header-section {
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #F3F4F6, #E5E7EB);
+      text-align: center;
+    }
+
+    .header-section h1 {
+      font-size: 42px;
+      color: #1E40AF;
+      margin-bottom: 10px;
+    }
+
+    .header-section p {
+      font-size: 18px;
+      color: #374151;
+    }
+
+    .ap-section {
+      padding: 40px 20px;
+      background: #F0F2F5;
+      text-align: center;
+    }
+
+    .btn-select {
+      margin-bottom: 30px;
+    }
+
+    .btn-select button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #1E3A8A;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-select button:hover,
+    .btn-select button.active {
+      background: #3B82F6;
+    }
+
+    .ap-card {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto;
+      border: 1px solid #E5E7EB;
+      border-radius: 10px;
+      padding: 30px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .ap-card.active {
+      display: block;
+    }
+
+    .ap-card h2 {
+      font-size: 24px;
+      color: #1E3A8A;
+      margin-bottom: 10px;
+    }
+
+    .ap-card p {
+      font-size: 16px;
+      color: #4B5563;
+    }
+      .ast-single-post .entry-content a, .ast-comment-content a:not(.ast-comment-edit-reply-wrap a) {
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+ <nav class="navbar">
+    <ul class="menu-desktop">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/index.php/ap/">AP</a></li>
+      <li><a href="/index.php/activites/">Activités</a></li>
+      <li><a href="/index.php/projets/">Projets</a></li>
+      <li>
+        <a href="/index.php/stages/stages/">Stages ▼</a>
+        <ul>
+          <li><a href="/index.php/stages/1ere-annee/">Stage 1ère année</a></li>
+          <li><a href="/index.php/stages/2eme-annee/">Stage 2ème année</a></li>
+        </ul>
+      </li>
+      <li><a href="/index.php/veille/">Veille</a></li>
+      <li><a href="/index.php/cv/">CV</a></li>
+      <li><a href="/index.php/contact/">Contact</a></li>
+      <li><a href="/index.php/competences/">Compétences</a></li>
+      <li><a href="/index.php/certifications/">Certifications</a></li>
+    </ul>
+  </nav>
+
+  <div class="spacer"></div>
+
+  <section class="header-section">
+    <h1>Atelier de Professionnalisation</h1>
+    <p>Voici mes AP réalisés dans le cadre de ma formation BTS SIO SISR.</p>
+  </section>
+
+  <section class="ap-section">
+    <div class="btn-select">
+      <button onclick="showAP('ap1')" class="active">AP1</button>
+      <button onclick="showAP('ap2')">AP2</button>
+      <button onclick="showAP('ap3')">AP3</button>
+      <button onclick="showAP('ap4')">AP4</button>
+    </div>
+
+    <div id="ap1" class="ap-card active">
+      <h2>AP1 – Parcours de professionnalisation</h2>
+      <p>Ce premier atelier m'a permis de découvrir le contexte professionnel du BTS SIO. J’ai rédigé mon rapport, analysé mes compétences, et réfléchi à mes objectifs de formation et de carrière.</p>
+      <a class="hover-btn" href="#" target="_blank">Voir le compte-rendu PDF</a>
+    </div>
+
+    <div id="ap2" class="ap-card">
+      <h2>AP2 –  Marie-Sol</h2>
+      <p>Dans cet atelier, j’ai mis en œuvre des techniques de sécurisation de réseau comme les VLAN, les ACL et l’analyse des risques.</p>
+      <a class="hover-btn" href="#" target="_blank">Voir le compte-rendu PDF</a>
+    </div>
+
+    <div id="ap3" class="ap-card">
+      <h2>AP3 – En Cours</h2>
+      <p></p>
+      <a class="hover-btn" href="#" target="_blank">Voir le compte-rendu PDF</a>
+    </div>
+
+    <div id="ap4" class="ap-card">
+      <h2>AP4 – En Cours</h2>
+      <p></p>
+      <a class="hover-btn" href="#" target="_blank">Voir le compte-rendu PDF</a>
+    </div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    function showAP(apId) {
+      const cards = document.querySelectorAll('.ap-card');
+      const buttons = document.querySelectorAll('.btn-select button');
+      cards.forEach(card => card.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.getElementById(apId).classList.add('active');
+      document.querySelector(`.btn-select button[onclick="showAP('${apId}')"]`).classList.add('active');
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('mainMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
 
