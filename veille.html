@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veille Technologique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1e1e1e;
+      background-color: #f5f7fa;
+    }
+
+    nav.navbar {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 10px 20px;
+      border-radius: 0 0 15px 15px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .navbar .menu-desktop {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      display: block;
+      padding: 8px 12px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #00aaff;
+    }
+
+    .navbar li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      z-index: 999;
+    }
+
+    .navbar li ul li a {
+      color: #000;
+      padding: 10px 15px;
+    }
+
+    .navbar li ul li a:hover {
+      background-color: #f5f7fa;
+    }
+
+    .navbar li:hover > ul {
+      display: block;
+    }
+
+    .spacer {
+      height: 60px;
+    }
+
+    .header-section {
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #F3F4F6, #E5E7EB);
+      text-align: center;
+    }
+
+    .header-section h1 {
+      font-size: 42px;
+      color: #1E40AF;
+      margin-bottom: 10px;
+    }
+
+    .header-section p {
+      font-size: 18px;
+      color: #374151;
+    }
+
+    .veille-section {
+      padding: 40px 20px;
+      background: #F0F2F5;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .veille-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .veille-card h2 {
+      font-size: 22px;
+      color: #1E3A8A;
+      margin-bottom: 10px;
+    }
+
+    .veille-card p {
+      font-size: 16px;
+      color: #4B5563;
+      line-height: 1.6;
+    }
+
+    .veille-card a {
+      color: #1E40AF;
+      text-decoration: underline;
+    }
+      .ast-single-post .entry-content a, .ast-comment-content a:not(.ast-comment-edit-reply-wrap a) {
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="menu-desktop">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/index.php/ap/">AP</a></li>
+      <li><a href="/index.php/activites/">Activités</a></li>
+      <li><a href="/index.php/projets/">Projets</a></li>
+      <li>
+        <a href="/index.php/stages/stages/">Stages ▼</a>
+        <ul>
+          <li><a href="/index.php/stages/1ere-annee/">Stage 1ère année</a></li>
+          <li><a href="/index.php/stages/2eme-annee/">Stage 2ème année</a></li>
+        </ul>
+      </li>
+      <li><a href="/index.php/veille/">Veille</a></li>
+      <li><a href="/index.php/cv/">CV</a></li>
+      <li><a href="/index.php/contact/">Contact</a></li>
+      <li><a href="/index.php/competences/">Compétences</a></li>
+      <li><a href="/index.php/certifications/">Certifications</a></li>
+    </ul>
+  </nav>
+
+  <div class="spacer"></div>
+
+  <section class="header-section">
+    <h1>Veille Technologique</h1>
+    <p>Retrouvez ici ma veille personnelle sur les évolutions récentes dans le domaine des technologies informatiques.</p>
+  </section>
+
+  <section class="veille-section">
+    <div class="veille-card">
+      <h2>Cybersécurité : Évolution des menaces en 2025</h2>
+      <p>En 2025, les ransomwares continuent de se sophistiquer, notamment avec l'utilisation de l'intelligence artificielle pour contourner les antivirus classiques. De plus, les attaques ciblant les objets connectés augmentent fortement. <a href="https://www.cert.ssi.gouv.fr/">Source : CERT-FR</a></p>
+    </div>
+  </section>
+</body>
+</html>
