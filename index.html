@@ -2,10 +2,117 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Mon site Albion Online</title>
+  <title>Builds Albion Online - OnixSpectre</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #f5f5f5;
+    }
+    header {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav a {
+      color: #f5f5f5;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #00ffcc;
+    }
+    section {
+      padding: 30px;
+    }
+    .build {
+      background: #333;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .build h2 {
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      font-size: 0.9em;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenue sur mon site Albion Online !</h1>
-  <p>Ici, tu trouveras des builds, des comparateurs et des vidéos de gameplay.</p>
+  <header>
+    <h1>Mes builds Albion Online</h1>
+    <nav>
+      <a href="#builds">Builds</a>
+      <a href="#comparateur">Comparateur</a>
+      <a href="#videos">Vidéos</a>
+    </nav>
+  </header>
+
+  <section id="builds">
+    <h2>Builds populaires</h2>
+    <div class="build">
+      <h3>Lance d'Hast - Mist</h3>
+      <p>Build agressif pour les Mists, basé sur la mobilité et le burst.</p>
+      <ul>
+        <li>Arme : Lance d'Hast</li>
+        <li>Tête : Capuche de chasseur</li>
+        <li>Torso : Armure de chasseur</li>
+        <li>Bottes : Bottes de soldat</li>
+      </ul>
+    </div>
+    <div class="build">
+      <h3>Arc long - Corrupted Dungeon</h3>
+      <p>Build kite & burst, parfait pour punir les joueurs agressifs.</p>
+      <ul>
+        <li>Arme : Arc long</li>
+        <li>Tête : Capuche de clerc</li>
+        <li>Torso : Robe de clerc</li>
+        <li>Bottes : Bottes de chasseur</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="comparateur">
+    <h2>Comparateur d'armes (à venir)</h2>
+    <p>Prochainement : comparez les armes et équipements en un clic ! 🔥</p>
+  </section>
+
+  <section id="videos">
+    <h2>Gameplay & vidéos</h2>
+    <p>Exemple de vidéo intégrée :</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/lF1p7Oz5lOY" title="Gameplay Albion Online" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 OnixSpectre - Tous droits réservés
+  </footer>
 </body>
 </html>
